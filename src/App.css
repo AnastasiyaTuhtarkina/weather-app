@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 20px;
+}
+
+.centered-container {
+  text-align: center; /* Центрируем текст внутри контейнера */
+  margin: 0 auto; /* Убедитесь, что контейнер сам имеет свойство margin авто для центрирования */
+  width: fit-content; /* Подгоняем ширину под содержимое */
+}
+
+h1 {
+  text-align: center;
+  color: #4a90e2;
+  font-size: 2.5rem; /* Установить размер для заголовка */
+}
+
+h2, h3 {
+  color: #333;
+}
+
+h4 {
+  text-align: center;
+  color: #4a90e2;
+  font-size: 2.0rem; /* Установить размер для заголовка */
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #357ab8;
+}
+
+.input-container {
+  display: flex; /* Используем Flexbox для выравнивания */
+  justify-content: center; /* Центрируем по горизонтали */
+  margin: 20px 0; /* Добавляем отступы сверху и снизу */
+}
+
+/* Стили для текстового поля */
+input[type="text"] {
+  padding: 10px; /* Внутренние отступы */
+  width: 100%; /* Полная ширина контейнера */
+  max-width: 400px; /* Ограничиваем максимальную ширину, чтобы не разрасталось слишком сильно */
+  margin: 10px; /* Внешние отступы */
+  border: 1px solid #ccc; /* Рамка */
+  border-radius: 5px; /* Закругленные углы */
+}
+
+/* Адаптивность для малых устройств */
+@media (max-width: 600px) {
+  input[type="text"] {
+      max-width: 90%; /* Увеличиваем ширину для мобильных устройств */
+  }
+}
+
+.forecast-container {
+  margin: 20px 0;
+  text-align: center; /* Центрируем заголовок и содержимое */
+}
+
+.forecast-items {
+  display: flex;
+  justify-content: space-around; /* Распределяем элементы */
+  flex-wrap: wrap; /* Автоматически переносим элементы на новую строку */
+}
+
+.forecast-day {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px; /* Отступы между элементами */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Каждый элемент занимает равное пространство */
+  min-width: 150px; /* Минимальная ширина для карточки */
+  max-width: 300px; /* Ограничиваем максимальную ширину для карточки */
+  text-align: center; /* Центрируем текст внутри карточки */
+}
+
+.error {
+  color: red;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem; /* Уменьшаем размер заголовка на мобильных устройствах */
+  }
+  
+  button {
+    font-size: 0.9rem; /* Уменьшаем размер кнопок */
+  }
+
+  .forecast-day {
+    flex: 1 1 100%; /* Каждая карточка занимает 100% ширины на узких экранах */
+  }
+
+  input[type="text"] {
+    font-size: 0.9rem; /* Уменьшение размера шрифта в текстовых полях */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2.2rem; /* Средний размер заголовка для планшетов */
+  }
+  
+  button {
+    font-size: 1rem; /* Увеличиваем размеры кнопок для планшетов */
+  }
+}
